@@ -14,7 +14,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Inmobiliaria Premium - Propiedades de Lujo',
+  title: 'Inmobiliaria Demo | Alquileres - Ventas',
   description: 'Encuentra tu propiedad ideal. Alquileres y ventas de propiedades exclusivas en las mejores ubicaciones.',
   generator: 'v0.app',
   icons: {
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
         media: '(prefers-color-scheme: dark)',
       },
       {
-        url: '/icon.svg',
+        url: '/icon.png',
         type: 'image/svg+xml',
       },
     ],
