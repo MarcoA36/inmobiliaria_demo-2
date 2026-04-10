@@ -1,34 +1,36 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { Phone, Mail, MapPin, Clock, Send } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
-import { Field, FieldGroup, FieldLabel } from "@/components/ui/field"
+import { useState } from "react";
+import { Phone, Mail, MapPin, Clock, Send } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
+import { Field, FieldGroup, FieldLabel } from "@/components/ui/field";
 
 export default function ContactoPage() {
   const [formData, setFormData] = useState({
     nombre: "",
     email: "",
     telefono: "",
-    mensaje: ""
-  })
+    mensaje: "",
+  });
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
+    e.preventDefault();
     // Handle form submission
-    console.log("Form submitted:", formData)
-    alert("Mensaje enviado correctamente. Nos pondremos en contacto contigo pronto.")
-    setFormData({ nombre: "", email: "", telefono: "", mensaje: "" })
-  }
+    console.log("Form submitted:", formData);
+    alert(
+      "Mensaje enviado correctamente. Nos pondremos en contacto contigo pronto.",
+    );
+    setFormData({ nombre: "", email: "", telefono: "", mensaje: "" });
+  };
 
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      
+
       <main className="flex-1">
         {/* Hero Section */}
         <section className="bg-primary py-20">
@@ -37,7 +39,8 @@ export default function ContactoPage() {
               Contáctanos
             </h1>
             <p className="text-primary-foreground/80 mt-4 max-w-2xl mx-auto leading-relaxed">
-              Estamos aquí para ayudarte a encontrar tu propiedad ideal. Contáctanos y te responderemos a la brevedad.
+              Estamos aquí para ayudarte a encontrar tu propiedad ideal.
+              Contáctanos y te responderemos a la brevedad.
             </p>
           </div>
         </section>
@@ -52,7 +55,8 @@ export default function ContactoPage() {
                   Envíanos un mensaje
                 </h2>
                 <p className="text-muted-foreground mb-8">
-                  Completa el formulario y te responderemos en menos de 24 horas.
+                  Completa el formulario y te responderemos en menos de 24
+                  horas.
                 </p>
 
                 <form onSubmit={handleSubmit}>
@@ -63,7 +67,9 @@ export default function ContactoPage() {
                         type="text"
                         placeholder="Tu nombre"
                         value={formData.nombre}
-                        onChange={(e) => setFormData({ ...formData, nombre: e.target.value })}
+                        onChange={(e) =>
+                          setFormData({ ...formData, nombre: e.target.value })
+                        }
                         required
                       />
                     </Field>
@@ -74,7 +80,9 @@ export default function ContactoPage() {
                         type="email"
                         placeholder="tu@email.com"
                         value={formData.email}
-                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                        onChange={(e) =>
+                          setFormData({ ...formData, email: e.target.value })
+                        }
                         required
                       />
                     </Field>
@@ -85,7 +93,9 @@ export default function ContactoPage() {
                         type="tel"
                         placeholder="Tu teléfono"
                         value={formData.telefono}
-                        onChange={(e) => setFormData({ ...formData, telefono: e.target.value })}
+                        onChange={(e) =>
+                          setFormData({ ...formData, telefono: e.target.value })
+                        }
                       />
                     </Field>
 
@@ -95,7 +105,9 @@ export default function ContactoPage() {
                         placeholder="Cuéntanos qué tipo de propiedad buscas..."
                         rows={5}
                         value={formData.mensaje}
-                        onChange={(e) => setFormData({ ...formData, mensaje: e.target.value })}
+                        onChange={(e) =>
+                          setFormData({ ...formData, mensaje: e.target.value })
+                        }
                         required
                       />
                     </Field>
@@ -123,9 +135,12 @@ export default function ContactoPage() {
                       <MapPin className="h-6 w-6 text-primary" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-foreground">Dirección</h3>
+                      <h3 className="font-semibold text-foreground">
+                        Dirección
+                      </h3>
                       <p className="text-muted-foreground mt-1">
-                        Av. Principal 1234<br />
+                        Av. Principal 1234
+                        <br />
                         Ciudad, CP 1234
                       </p>
                     </div>
@@ -136,17 +151,29 @@ export default function ContactoPage() {
                       <Phone className="h-6 w-6 text-primary" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-foreground">Teléfonos</h3>
+                      <h3 className="font-semibold text-foreground">
+                        Teléfonos
+                      </h3>
                       <div className="text-muted-foreground mt-1 space-y-1">
                         <p>
-                          <span className="text-foreground font-medium">Alquileres:</span>{" "}
-                          <a href="tel:2284132343" className="hover:text-primary transition-colors">
+                          <span className="text-foreground font-medium">
+                            Alquileres:
+                          </span>{" "}
+                          <a
+                            href="tel:2284132343"
+                            className="hover:text-primary transition-colors"
+                          >
                             2284-132343
                           </a>
                         </p>
                         <p>
-                          <span className="text-foreground font-medium">Ventas:</span>{" "}
-                          <a href="tel:2284123242" className="hover:text-primary transition-colors">
+                          <span className="text-foreground font-medium">
+                            Ventas:
+                          </span>{" "}
+                          <a
+                            href="tel:2284123242"
+                            className="hover:text-primary transition-colors"
+                          >
                             2284-123242
                           </a>
                         </p>
@@ -160,8 +187,8 @@ export default function ContactoPage() {
                     </div>
                     <div>
                       <h3 className="font-semibold text-foreground">Email</h3>
-                      <a 
-                        href="mailto:inmobiliarias@gmail.com" 
+                      <a
+                        href="mailto:inmobiliarias@gmail.com"
                         className="text-muted-foreground hover:text-primary transition-colors mt-1 block"
                       >
                         inmobiliarias@gmail.com
@@ -174,7 +201,9 @@ export default function ContactoPage() {
                       <Clock className="h-6 w-6 text-primary" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-foreground">Horario de atención</h3>
+                      <h3 className="font-semibold text-foreground">
+                        Horario de atención
+                      </h3>
                       <div className="text-muted-foreground mt-1 space-y-1">
                         <p>Lunes a Viernes: 9:00 - 18:00</p>
                         <p>Sábados: 9:00 - 13:00</p>
@@ -192,16 +221,15 @@ export default function ContactoPage() {
         <section className="bg-muted/50">
           <div className="container mx-auto px-4 py-16">
             <div className="bg-card rounded-xl overflow-hidden border border-border shadow-lg">
-              <div className="aspect-[16/6] bg-muted flex items-center justify-center">
-                <div className="text-center p-8">
-                  <MapPin className="h-12 w-12 text-primary mx-auto mb-4" />
-                  <p className="text-muted-foreground">
-                    Mapa interactivo disponible próximamente
-                  </p>
-                  <p className="text-sm text-muted-foreground mt-2">
-                    Av. Principal 1234, Ciudad
-                  </p>
-                </div>
+              <div className="aspect-[16/6]">
+                <iframe
+                  src="https://www.google.com/maps?q=Av.+Del+Valle+1234,+Olavarr%C3%ADa,+Buenos+Aires,+Argentina&output=embed"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
               </div>
             </div>
           </div>
@@ -210,5 +238,5 @@ export default function ContactoPage() {
 
       <Footer />
     </div>
-  )
+  );
 }
