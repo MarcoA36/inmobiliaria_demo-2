@@ -32,8 +32,23 @@ export const metadata: Metadata = {
         type: 'image/svg+xml',
       },
     ],
-    apple: '/icon.png',
+    apple: '/apple-icon.png',
   },
+  openGraph: {
+  title: 'Inmobiliaria Demo | Alquileres - Ventas',
+  description: 'Encuentra tu propiedad ideal. Alquileres y ventas de propiedades exclusivas en las mejores ubicaciones.',
+  url: 'https://inmobiliaria-demo-2.vercel.app',
+  siteName: 'Inmobiliaria Demo',
+  images: [
+    {
+      url: 'https://inmobiliaria-demo-2.vercel.app/og-image.jpg',
+      width: 1200,
+      height: 630,
+    },
+  ],
+  locale: 'es_AR',
+  type: 'website',
+},
 }
 
 export default function RootLayout({
