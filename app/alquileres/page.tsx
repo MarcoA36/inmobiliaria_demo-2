@@ -4,7 +4,7 @@ import { PropertyCard } from "@/components/property-card"
 import { getPropertiesByType } from "@/lib/properties"
 
 export const metadata = {
-  title: "Alquileres - Inmobiliaria Premium",
+  title: "Alquileres - Inmobiliaria",
   description: "Encuentra las mejores propiedades en alquiler. Departamentos, casas, oficinas y más.",
 }
 
